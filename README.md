@@ -278,19 +278,6 @@ logs/
 ## 👨‍💻 Author
 
 **Suraj Khonde**
-Full Stack Engineering
-
----
-
-## 💭 Final Thought
-
-This project is not just about calling an LLM.
-
-It’s about:
-
-* Designing systems cleanly
-* Thinking in layers
-* Preparing for scale
-* Writing code that can evolve
+Full Stack Engineer
 
 ---
