@@ -21,3 +21,6 @@ build/
 
 # Optional: coverage
 coverage/
+
+logs/
+*.log

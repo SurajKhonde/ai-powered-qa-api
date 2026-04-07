@@ -23,11 +23,11 @@ export const register = async (req, res, next) => {
     const user = await User.create({
       email,
       password: hashed,
-      role: role === "admin" ? "admin" : "user"
+      roles: role === "admin" ? "admin" : "user"
     });
 
     res.status(201).json({
-      token: generateToken(user._id, user.role),
+      token: generateToken(user._id, user.roles),
     });
   } catch (err) {
     next(err);
@@ -40,13 +40,13 @@ export const login = async (req, res, next) => {
     const { email, password } = req.body;
 
     const user = await User.findOne({ email });
-
+    console.log(user)
     if (!user || !(await bcrypt.compare(password, user.password))) {
       return res.status(401).json({ message: "Invalid credentials" });
     }
 
     res.json({
-      token: generateToken(user._id,user.role),
+      token: generateToken(user._id ,user.roles),
     });
   } catch (err) {
     next(err);

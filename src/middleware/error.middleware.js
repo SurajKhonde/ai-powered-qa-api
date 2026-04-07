@@ -4,7 +4,6 @@ export const errorHandler = (err, req, res, next) => {
   logger.error({
     type: "ERROR",
     message: err.message,
-    stack: err.stack,
     url: req.originalUrl,
     method: req.method,
     userId: req.user?.id || null,
