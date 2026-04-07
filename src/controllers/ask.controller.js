@@ -1,4 +1,4 @@
-import { logAsk } from "../utils/logger.js";
+import { logAsk } from "../utils/askLogger.js";
 import {askQuestion} from "../services/ask.service.js"
 import { validateLLMResponse } from "../utils/validateResponse.js";
 export const askController = async (req, res, next) => {

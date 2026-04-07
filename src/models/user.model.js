@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { string } from "zod";
 
 const userSchema = new mongoose.Schema({
   email: {
@@ -9,6 +10,11 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
+  },
+  roles:{
+    type: string,
+    emum:["user","admin"],
+    default:"user"
   },
   createdAt: {
     type: Date,
